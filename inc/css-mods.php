@@ -14,6 +14,7 @@ function store_custom_css_mods() {
 	endif;
 	
 	
+	
 	//Exception: IMage transform origin should be left on Left Alignment, i.e. Default
 	if ( !get_theme_mod('store_center_logo') ) :
 		echo "#masthead #site-logo img { transform-origin: left; }";

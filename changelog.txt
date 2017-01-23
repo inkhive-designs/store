@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+Version 1.0.3
+
+	i) Removed Duplicate Fonts
+
 Version 1.0.2
 
 	i) Fixed Bug with Menu Showing up weird by default.
