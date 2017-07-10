@@ -1,6 +1,24 @@
 ChangeLog
 =========
 
+Version 1.0.7
+
+	i) Corrected Featured Thumb size when WooCommerce not installed.
+	ii) Corrected Footer Links
+
+Version 1.0.6
+
+	i) Fixed Issues with WooCommerce 3
+
+Version 1.0.5
+
+	i) Fixed Slider issues on Front page.
+
+Version 1.0.4
+
+	i) Issue with Fonts not loading, when default value not provided.
+	ii) Content width corrected.
+
 Version 1.0.3
 
 	i) Removed Duplicate Fonts

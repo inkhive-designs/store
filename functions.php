@@ -30,7 +30,7 @@ function store_setup() {
 	 */
 	 global $content_width;
 	 if ( ! isset( $content_width ) ) {
-		$content_width = 640; /* pixels */
+		$content_width = 760; /* pixels */
 	 }
 	 
 	// Add default posts and comments RSS feed links to head.
@@ -86,6 +86,7 @@ function store_setup() {
 	
 	//Declare woocommerce support
 	add_theme_support('woocommerce');
+	add_theme_support( 'wc-product-gallery-lightbox' );
 	
 }
 endif; // store_setup
@@ -152,7 +153,7 @@ function store_scripts() {
 	wp_enqueue_style( 'store-style', get_stylesheet_uri() );
 	
 	wp_enqueue_style('store-title-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", get_theme_mod('store_title_font', 'Lato') ).':100,300,400,700' );
-	if (get_theme_mod('store_body_font') != get_theme_mod('store_title_font')) {
+	if (get_theme_mod('store_body_font','Open Sans') != get_theme_mod('store_title_font','Lato')) {
 	wp_enqueue_style('store-body-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", get_theme_mod('store_body_font', 'Open Sans') ).':100,300,400,700' );
 	}
 	

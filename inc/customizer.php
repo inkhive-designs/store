@@ -1086,7 +1086,7 @@ function store_customize_register( $wp_customize ) {
 	    'store_sec_upgrade',
 	    array(
 	        'title'     => __('Store Theme - Help & Support','store'),
-	        'priority'  => 45,
+	        'priority'  => 1,
 	    )
 	);
 	

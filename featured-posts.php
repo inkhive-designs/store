@@ -66,7 +66,7 @@
 				        	global $product; 
 				        	
 				        	if ( has_post_thumbnail() ) :
-				        		$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID), 'shop_catalog' ); 
+				        		$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID), 'store-sq-thumb' ); 
 								$image_url = $image_data[0]; 
 							endif;		
 				        	

@@ -4,7 +4,7 @@
 */
 
 //Define all Variables.
-if ( get_theme_mod('store_main_slider_enable' ) && is_home() ) : 
+if ( get_theme_mod('store_main_slider_enable' ) && is_front_page() ) : 
 
 	$count_x = $count = get_theme_mod('store_main_slider_count');
 

@@ -1,7 +1,7 @@
 Store WordPress Theme
 GNU GPL v3
-Copyrights 2015. Rohit Tripathi.
-https://rohitink.com/2015/05/21/store-woocommerce-theme/
+Copyrights 2015. Inkhive.
+https://inkhive.com/product/store
 
 
 Store
