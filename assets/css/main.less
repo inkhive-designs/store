@@ -1,5 +1,4 @@
-@import "variables";
-@import "functions";
+
 .body-font {
 	font-family: "Open Sans", sans-serif;
 }
@@ -54,7 +53,7 @@ a {
 			margin-bottom: 5px;
 		}
 	}
-	.hvr-ripple-out {
+	.social-icons a {
 		background: @accent;
 		padding: 3px 7px; 
 		padding-top: 5px;
@@ -78,52 +77,6 @@ a {
 			
 		}
 	}
-	.hvr-wobble-bottom{
-		background: @onaccent;
-		padding: 10px;
-		border-radius: 5px;
-		&:before{
-			border-radius: 5px;
-		}
-		&:hover{
-			background: @onaccent;
-			color: @content;
-			border-radius: 5px;
-		}
-
-	}
-	.hvr-bounce-to-bottom{
-		background: @onaccent;
-		padding: 10px;
-		//border-radius: 5px;
-		&:before{
-			background: @accent !important;
-			color: @content;
-		}
-	}
-	.hvr-rectangle-out{
-		background: @onaccent;
-		padding: 10px;
-		border-radius: 10px;
-		&:before{
-			background: @accent !important;
-			color: @content;
-		}
-	}
-	.hvr-shutter-in-horizontal{
-		background: @background;
-		padding: 10px;
-		&:before{
-		//	background: @accent !important;
-			color: @accent;
-		}
-		&:hover{
-			     color: @accent;
-		}
-	}
-
-
-
 	#searchicon {
 		background: #eee;
 		border: solid 2px #ddd;
@@ -1095,46 +1048,6 @@ a {
 				background: @accent;
 			}
 }
-.blog_mixup{
-	.postedon{
-		background:@onaccent;
-		top: 10px;
-		padding: 10px;
-		position: absolute;
-	}
-	border-bottom: darken(@content,20%) 1px solid;
-	height: 320px;
-	.featured-thumb{
-		border-top: none;
-	}
-	.out-thumb{
-		@media screen and (max-width: 768px) {
-			padding: none;
-			margin: none;
-		}
-		background: darken(@onaccent,20%);
-		top: 50px;
-		right: 50px;
-		position: absolute;
-		height: 230px;
-		.entry-header{
-			margin: 25px 20px;
-		}
-		.grid .out-thumb h1 a{
-			color: darken(@onaccent,80%) !important;
-		}
-		.readmore a{
-			padding: 10px;
-			margin-top: 23px;
-			background: @accent;
-			color: @onaccent;
-			&:hover{
-				background: lighten(@background,10%);
-				color: @content;
-			}
-		}
-	}
-}
 
 .grid_2_column {
 	padding: 0;
@@ -1493,7 +1406,7 @@ aside:nth-child(odd) {
 		 }
 		 input[type=search] {
 			 background: white;
-			 border: solid 2px darken(@background, 6%);
+			 border: solid 2px @sbg;
 			 border-radius: 0px;
 			 padding: 15px;
 			 font-size: 16px;
@@ -1529,7 +1442,7 @@ aside:nth-child(odd) {
 			font-size: 14px !important;
 			text-transform: uppercase;
 			font-weight: lighter;
-			color: darken(@background, 6%);
+			color: @sbg;
 			padding: 7px 5px;
 			margin-bottom: 5px;
 			display: inline-block;
@@ -1680,7 +1593,7 @@ span.infinite-loader .spinner {
 				font-size: 14px !important;
 				text-transform: uppercase;
 				font-weight: lighter;
-				color: darken(@background, 6%);
+				color: @sbg;
 				padding: 7px 5px;
 				margin-bottom: 5px;
 				display: inline-block;
@@ -1979,3 +1892,4 @@ span.infinite-loader .spinner {
 		 margin-left: -5%;
 	 }
  }
+

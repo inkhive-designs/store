@@ -730,7 +730,7 @@ function store_customize_register( $wp_customize ) {
 	);
 	
 	function store_sanitize_blog_layout( $input ) {
-		if ( in_array($input, array('grid','grid_2_column','store','store_3_column') ) )
+		if ( in_array($input, array('grid','grid_2_column','store','store_3_column','blog_mixup') ) )
 			return $input;
 		else 
 			return '';	
@@ -747,6 +747,7 @@ function store_customize_register( $wp_customize ) {
 						'store' => __('Store Theme Layout','store'),
 						'store_3_column' => __('Store Theme Layout (3 Columns)','store'),
 						'grid_2_column' => __('Grid - 2 Column','store'),
+                        'blog_mixup'    => __('Blog Mixup','store'),
 					)
 			)
 	);
@@ -938,7 +939,8 @@ function store_customize_register( $wp_customize ) {
 					'orange' =>  __('Orange','store'),
 					'brown' =>  __('Brown','store'),
 					'green' => __('Green','store'),
-					'grayscale' => __('GrayScale','store') );
+					'grayscale' => __('GrayScale','store'),
+                    'radish' => __('Radish','store'));
 	
 	$wp_customize->add_control(
 		'store_skin',array(
@@ -950,7 +952,7 @@ function store_customize_register( $wp_customize ) {
 	);
 	
 	function store_sanitize_skin( $input ) {
-		if ( in_array($input, array('default','orange','brown','green','grayscale') ) )
+		if ( in_array($input, array('default','orange','brown','green','grayscale','radish') ) )
 			return $input;
 		else
 			return '';
@@ -1016,7 +1018,40 @@ function store_customize_register( $wp_customize ) {
 			'title' => __('Social Icons','store'),
 			'priority' => 44 ,
 	));
-	
+    //social icons style
+    $social_style = array(
+        'hvr-ripple-out'  => __('Default', 'store'),
+        'hvr-wobble-bottom'   => __('Style 1', 'store'),
+        'hvr-bounce-to-bottom'   => __('Style 2', 'store'),
+        'hvr-rectangle-out'   => __('Style 3', 'store'),
+        'hvr-shutter-in-horizontal'   => __('Style 4', 'store'),
+    );
+    $wp_customize->add_setting(
+        'store_social_icon_style_set', array(
+        'sanitize_callback' => 'store_sanitize_social_style',
+        'default' => 'hvr-ripple-out'
+    ));
+
+    function store_sanitize_social_style( $input ) {
+        if ( in_array($input, array(
+            'hvr-bounce-to-bottom',
+            'hvr-wobble-bottom',
+            'hvr-ripple-out',
+            'hvr-rectangle-out',
+            'hvr-shutter-in-horizontal') ) )
+            return $input;
+        else
+            return '';
+    }
+
+    $wp_customize->add_control( 'store_social_icon_style_set', array(
+        'settings' => 'store_social_icon_style_set',
+        'label' => __('Social Icon Style ','store'),
+        'description' => __('You can choose your icon style','store'),
+        'section' => 'store_social_section',
+        'type' => 'select',
+        'choices' => $social_style,
+    ));
 	$social_networks = array( //Redefinied in Sanitization Function.
 					'none' => __('-','store'),
 					'facebook' => __('Facebook','store'),
