@@ -3742,9 +3742,6 @@ p.woocommerce-shipping-contents {
 .reply-title {
   color: #aaaaaa;
 }
-.grid .out-thumb h1 a {
-  color: #333333;
-}
 .pagination ul > li > a,
 .pagination ul > li > span {
   background: #CA2D4F;
@@ -3766,6 +3763,6 @@ p.woocommerce-shipping-contents {
   background: #08121a;
   border-color: #999999;
 }
-.grid {
-  border-bottom: #919191 1px solid;
+.grid .out-thumb h1 a {
+  color: #e6e6e6;
 }
