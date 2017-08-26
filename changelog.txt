@@ -1,6 +1,14 @@
 ChangeLog
 =========
 
+Version 1.0.8
+
+	i) New Layouts
+	ii) New Icon Effects
+	iii) New Framework
+	iv) Improved Code
+	v) Bug Fixes
+
 Version 1.0.7
 
 	i) Corrected Featured Thumb size when WooCommerce not installed.

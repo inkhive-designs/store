@@ -20,7 +20,7 @@ $wp_customize->add_control(
         'store_upgrade',
         array(
             'label' => __('Thank You','store'),
-            'description' => __('Thank You for Choosing Store Theme by Rohitink.com. Store is a Powerful Wordpress theme which also supports WooCommerce in the best possible way. It is "as we say" the last theme you would ever need. It has all the basic and advanced features needed to run a gorgeous looking site. For any Help related to this theme, please visit  <a href="https://rohitink.com/2015/05/21/store-woocommerce-theme/">Store Help & Support</a>.','store'),
+            'description' => __('Thank You for Choosing Store Theme by Inkhive.com. Store is a Powerful Wordpress theme which also supports WooCommerce in the best possible way. It is "as we say" the last theme you would ever need. It has all the basic and advanced features needed to run a gorgeous looking site. For any Help related to this theme, please visit  <a href="https://inkhive.com/product/store/">Store Help & Support</a>.','store'),
             'section' => 'store_sec_upgrade',
             'settings' => 'store_upgrade',
         )
@@ -46,7 +46,7 @@ $wp_customize->add_control(
         'store_pro',
         array(
             'label' => __('Upgrade to Pro','store'),
-            'description' => __('<a href="https://rohitink.com/product/store-pro/"><strong>Store Pro</strong></a> has so many features that it will make you fall in love with it. <ul class="prolists">
+            'description' => __('<a href="https://inkhive.com/product/store-pro/"><strong>Store Pro</strong></a> has so many features that it will make you fall in love with it. <ul class="prolists">
 	            <li>Better Responsiveness</li>
 	            <li>650+ Google Fonts</li>
 	            <li>Carousel, Flex Grid and More Featured Content</li>
@@ -65,7 +65,7 @@ $wp_customize->add_control(
 	            <li>Easy to Remove Footer Credit Links</li>
 	            <li>And so much more...</li>
 	            
-	            </ul> <a href="https://rohitink.com/product/store-pro/">Upgrade Now</a>.','store'),
+	            </ul> <a href="https://inkhive.com/product/store-pro/">Upgrade Now</a>.','store'),
             'section' => 'store_sec_pro',
             'settings' => 'store_pro',
         )
