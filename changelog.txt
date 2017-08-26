@@ -1,8 +1,6 @@
 ChangeLog
 =========
 
-<<<<<<< HEAD
-=======
 Version 1.0.8
 
 	i) New Layouts
@@ -11,7 +9,6 @@ Version 1.0.8
 	iv) Improved Code
 	v) Bug Fixes
 
->>>>>>> gourav_dev_framework
 Version 1.0.7
 
 	i) Corrected Featured Thumb size when WooCommerce not installed.

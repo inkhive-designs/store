@@ -3,9 +3,6 @@
  * @package store, Copyright Rohit Tripathi, rohitink.com
  * This file contains Custom Theme Related Functions.
  */
-<<<<<<< HEAD
- 
-=======
 /*
  * @package madhat, Copyright Rohit Tripathi, rohitink.com
  * This file contains Custom Theme Related Functions.
@@ -16,7 +13,6 @@ require get_template_directory() . '/framework/admin_modules/register_widgets.ph
 require get_template_directory() . '/framework/admin_modules/theme_setup.php';
 require get_template_directory() . '/framework/admin_modules/admin_styles.php';
 
->>>>>>> gourav_dev_framework
  
 class Store_Menu_With_Description extends Walker_Nav_Menu {
 	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
