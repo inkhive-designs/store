@@ -32,7 +32,11 @@ get_header(); ?>
 
 		<?php else : ?>
 
+<<<<<<< HEAD
 			<?php get_template_part( 'content', 'none' ); ?>
+=======
+			<?php get_template_part( 'modules/content/content', 'none' ); ?>
+>>>>>>> gourav_dev_framework
 
 		<?php endif; ?>
 

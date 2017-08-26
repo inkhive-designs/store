@@ -1,5 +1,6 @@
 <?php
 /**
+<<<<<<< HEAD
  * store functions and definitions
  *
  * @package store
@@ -194,6 +195,8 @@ add_action( 'admin_enqueue_scripts', 'store_custom_wp_admin_style' );
 
 
 /**
+=======
+>>>>>>> gourav_dev_framework
  * Include the Custom Functions of the Theme.
  */
 require get_template_directory() . '/framework/theme-functions.php';
@@ -222,7 +225,11 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
+<<<<<<< HEAD
 require get_template_directory() . '/inc/customizer.php';
+=======
+require get_template_directory() . '/framework//customizer/init.php';
+>>>>>>> gourav_dev_framework
 
 /**
  * Load Jetpack compatibility file.

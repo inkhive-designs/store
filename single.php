@@ -12,7 +12,11 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
+<<<<<<< HEAD
 			<?php get_template_part( 'content', 'single' ); ?>
+=======
+			<?php get_template_part( 'modules/content/content', 'single' ); ?>
+>>>>>>> gourav_dev_framework
 
 			<?php //store_post_nav(); ?>
 
