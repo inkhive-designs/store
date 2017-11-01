@@ -1,14 +1,6 @@
 <?php
 //Select the Default Theme Skin
 function store_customize_register_skins( $wp_customize ) {
-$wp_customize->add_section(
-    'store_skin_options',
-    array(
-        'title'     => __('Choose Skin','store'),
-        'priority'  => 39,
-    )
-);
-
 $wp_customize->add_setting(
     'store_skin',
     array(
@@ -27,7 +19,7 @@ $skins = array( 'default' => __('Default(blue)','store'),
 $wp_customize->add_control(
     'store_skin',array(
         'settings' => 'store_skin',
-        'section'  => 'store_skin_options',
+        'section'  => 'colors',
         'type' => 'select',
         'choices' => $skins,
     )

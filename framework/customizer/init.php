@@ -13,6 +13,11 @@
 function store_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
+    //Renameing Default Sections
+    $wp_customize->get_section('colors')->title = __('Theme Skins & Colors', 'store');
+    $wp_customize->get_section('colors')->panel = 'store_design_panel';
+    $wp_customize->get_section('background_image')->panel = 'store_design_panel';
 }
 add_action( 'customize_register', 'store_customize_register' );
 

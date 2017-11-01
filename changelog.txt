@@ -1,6 +1,11 @@
 ChangeLog
 =========
 
+Version 1.0.9
+
+    i) Logo Size Issues Fixed
+    ii) Minor Bugs Fixed
+
 Version 1.0.8
 
 	i) New Layouts

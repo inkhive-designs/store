@@ -268,10 +268,10 @@ $wp_customize->add_control(
 $wp_customize->add_section(
     'store_a_fc_slider',
     array(
-        'title'     => __('3D Cube Products Slider','store'),
+        'title'     => __('3D Cube Posts Slider','store'),
         'priority'  => 10,
         'panel'     => 'store_a_fcp_panel',
-        'description' => 'This is the Posts Slider, displayed left to the square boxes.',
+        'description' => __('This is the Posts Slider, displayed left to the square boxes.', 'store')
     )
 );
 

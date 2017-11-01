@@ -6,7 +6,8 @@ $wp_customize->add_section(
     array(
         'title'     => __('Google Web Fonts','store'),
         'priority'  => 41,
-        'description' => __('Defaults: Lato, Open Sans.','store')
+        'description' => __('Defaults: Lato, Open Sans.','store'),
+        'panel'     => 'store_design_panel'
     )
 );
 
