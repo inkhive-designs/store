@@ -5,6 +5,11 @@
  */
  ?>
  </div><!--.mega-container-->
+    <div class="scroll-up">
+        <a id="button-scroll-down" href="#top-bar">
+            <i class="fa fa-hand-o-up"></i>
+        </a>
+    </div>
  <?php if ( is_active_sidebar('footer-1') || is_active_sidebar('footer-2') || is_active_sidebar('footer-3') || is_active_sidebar('footer-4') ) : ?>
 	 <div id="footer-sidebar" class="widget-area">
 	 	<div class="container">

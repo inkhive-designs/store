@@ -120,5 +120,24 @@ jQuery(function(){
         autoplay: 2500,
         effect: 'fade'
     });		
-});		
+});
+
+//smooth scrolling
+jQuery(document).ready( function() {
+jQuery("#button-scroll-up").click(function() {
+    jQuery('html, body').animate({
+        scrollTop: jQuery("#colophon").offset().top
+    }, 2000);
+});
+
+});
+
+jQuery(document).ready( function() {
+    jQuery("#button-scroll-down").click(function() {
+        jQuery('html, body').animate({
+            scrollTop: jQuery("#top-bar").offset().top
+        }, 2000);
+    });
+
+});
 	

@@ -1,5 +1,7 @@
 ChangeLog
 =========
+Version 1.1.0
+    i) Added page scrolling feature.
 
 Version 1.0.9
 

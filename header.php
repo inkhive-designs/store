@@ -14,7 +14,13 @@
     <?php get_template_part('modules/header/jumbosearch') ?>
     <?php get_template_part('modules/header/top','bar') ?>
     <?php get_template_part('modules/header/masthead') ?>
-	
+	<!-- Smooth scrolling-->
+    <div class="scroll-down">
+        <a id="button-scroll-up" href="#colophon">
+            <i class="fa fa-hand-o-down"></i>
+        </a>
+    </div>
+
 	<div class="mega-container">
 		<?php get_template_part('framework/featured-components/slider', 'swiper'); ?>
 		<?php if (class_exists('woocommerce')) : ?>	
