@@ -20,7 +20,9 @@
 				        	
 				        	if ( has_post_thumbnail() ) :
 				        		$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID), 'store-sq-thumb' ); 
-								$image_url = $image_data[0]; 
+								$image_url = $image_data[0];
+                            else:
+                                $image_url = get_template_directory_uri()."/assets/images/600x600.png";
 							endif;		
 				        	
 				        ?>
@@ -67,7 +69,9 @@
 				        	
 				        	if ( has_post_thumbnail() ) :
 				        		$image_data = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID), 'store-sq-thumb' ); 
-								$image_url = $image_data[0]; 
+								$image_url = $image_data[0];
+                            else:
+                                $image_url = get_template_directory_uri()."/assets/images/600x600.png";
 							endif;		
 				        	
 				        ?>

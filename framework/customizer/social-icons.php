@@ -3,7 +3,9 @@
 function store_customize_register_social( $wp_customize ) {
 $wp_customize->add_section('store_social_section', array(
     'title' => __('Social Icons','store'),
-    'priority' => 44 ,
+    'priority' => 3,
+    'panel'      => 'store_header_panel'
+
 ));
 //social icons style
 $social_style = array(

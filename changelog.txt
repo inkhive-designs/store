@@ -1,5 +1,13 @@
 ChangeLog
 =========
+Version: 1.1.3
+
+    i) Admin css bug fixed.
+    ii) Site logo bug fixed on mobile screen.
+    iii) Blog (Mixup) bug fixed.
+    iv) 3D cube bug fixed.
+    v) Other minor bug fixed.
+
 Version: 1.1.2
 
     i) Admin CSS bug fixed.

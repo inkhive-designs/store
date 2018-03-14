@@ -1,9 +1,16 @@
 <?php
 //Logo Settings
 function store_customize_register_header( $wp_customize ) {
+    //Header Settings
+    $wp_customize->add_panel('store_header_panel', array(
+        'title' => __('Header Settings', 'store'),
+        'priority' =>20,
+    ));
+
 $wp_customize->add_section( 'title_tagline' , array(
     'title'      => __( 'Title, Tagline & Logo', 'store' ),
-    'priority'   => 30,
+    'priority'   => 1,
+    'panel'      => 'store_header_panel'
 ) );
 
 $wp_customize->add_setting( 'store_logo' , array(

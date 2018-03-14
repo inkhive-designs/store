@@ -161,7 +161,7 @@ function store_load_sidebar() {
 **	Determining Sidebar and Primary Width
 */
 function store_primary_class() {
-	$sw = get_theme_mod('store_sidebar_width',4);
+	$sw = esc_html( get_theme_mod('store_sidebar_width',4));
 	$class = "col-md-".(12-$sw);
 	
 	if ( !store_load_sidebar() ) 
@@ -172,7 +172,7 @@ function store_primary_class() {
 add_action('store_primary-width', 'store_primary_class');
 
 function store_secondary_class() {
-	$sw = get_theme_mod('store_sidebar_width',4);
+	$sw = esc_html(get_theme_mod('store_sidebar_width',4));
 	$class = "col-md-".$sw;
 	
 	echo $class;
@@ -221,7 +221,7 @@ add_action('store_blog_layout', 'store_get_blog_layout');
 */
 function store_get_main_class(){
 	
-	$layout = get_theme_mod('store_blog_layout');
+	$layout = esc_html(get_theme_mod('store_blog_layout'));
 	if (strpos($layout,'store') !== false) {
 	    	echo 'store-main';
 	}		
