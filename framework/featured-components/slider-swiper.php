@@ -32,6 +32,8 @@ if ( get_theme_mod('store_main_slider_enable' ) && is_front_page() ) :
 					                
 					                <?php if ($title) : ?>
 						                <div class="slide-title"><?php echo $title ?></div>
+                                    <?php endif ?>
+                                    <?php if ( $desc) : ?>
 						                <div class="slide-desc"><span><?php echo $desc ?></span></div>
 						            <?php endif; ?> 
 								</div>

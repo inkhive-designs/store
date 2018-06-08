@@ -136,54 +136,6 @@ function store_show_sidebar_options($control) {
 
 }
 
-class Store_Custom_CSS_Control extends WP_Customize_Control {
-    public $type = 'textarea';
-
-    public function render_content() {
-        ?>
-        <label>
-            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-            <textarea rows="8" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-        </label>
-        <?php
-    }
-}
-
-$wp_customize-> add_section(
-    'store_custom_codes',
-    array(
-        'title'			=> __('Custom CSS','store'),
-        'description'	=> __('Enter your Custom CSS to Modify design.','store'),
-        'priority'		=> 11,
-        'panel'			=> 'store_design_panel'
-    )
-);
-
-$wp_customize->add_setting(
-    'store_custom_css',
-    array(
-        'default'		=> '',
-        'capability'           => 'edit_theme_options',
-        'sanitize_callback'    => 'wp_filter_nohtml_kses',
-        'sanitize_js_callback' => 'wp_filter_nohtml_kses'
-    )
-);
-
-$wp_customize->add_control(
-    new Store_Custom_CSS_Control(
-        $wp_customize,
-        'store_custom_css',
-        array(
-            'section' => 'store_custom_codes',
-            'settings' => 'store_custom_css'
-        )
-    )
-);
-
-function store_sanitize_text( $input ) {
-    return wp_kses_post( force_balance_tags( $input ) );
-}
-
 $wp_customize-> add_section(
     'store_custom_footer',
     array(
@@ -209,6 +161,23 @@ $wp_customize->add_control(
         'settings' => 'store_footer_text',
         'type' => 'text'
     )
+);
+
+$wp_customize->add_setting(
+        'store_hide_fc_line',
+        array(
+           'sanitize_callback' => 'store_sanitize_checkbox',
+        )
+);
+
+$wp_customize->add_control(
+        'store_hide_fc_line',
+        array(
+            'section' => 'store_custom_footer',
+            'settings' => 'store_hide_fc_line',
+            'label' => __('Hide footer Credit Line', 'store'),
+            'type'  => 'checkbox',
+        )
 );
 }
 add_action( 'customize_register', 'store_customize_register_layouts' );

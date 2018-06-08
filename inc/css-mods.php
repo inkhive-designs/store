@@ -13,13 +13,7 @@ function store_custom_css_mods() {
 		echo "#site-navigation ul li a { padding: 16px 12px; }";
 	endif;
 	
-	
-	
 	//Exception: IMage transform origin should be left on Left Alignment, i.e. Default
-	if ( !get_theme_mod('store_center_logo') ) :
-		echo "#masthead #site-logo img { transform-origin: left; }";
-	endif;	
-	
 	if ( get_theme_mod('store_title_font') ) :
 		echo ".title-font, h1, h2, .section-title, .woocommerce ul.products li.product h3 { font-family: ".esc_html( get_theme_mod('store_title_font','Lato') )."; }";
 	endif;
@@ -32,28 +26,20 @@ function store_custom_css_mods() {
 		echo "#masthead h1.site-title a { color: ".esc_html( get_theme_mod('store_site_titlecolor', '#FFFFFF') )."; }";
 	endif;
 	
-	
 	if ( get_theme_mod('store_header_desccolor','#777') ) :
 		echo ".site-description { color: ".esc_html( get_theme_mod('store_header_desccolor','#FFFFFF') )."; }";
 	endif;
 	//Check Jetpack is active
 	if ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) )
 		echo '.pagination { display: none; }';
-
-
-	if ( get_theme_mod('store_custom_css') ) :
-		echo  strip_tags( get_theme_mod('store_custom_css') );
-	endif;
-	
 	
 	if ( get_theme_mod('store_hide_title_tagline') ) :
 		echo "#masthead .site-branding #text-title-desc { display: none; }";
 	endif;
-	
-	if ( get_theme_mod('store_logo_resize') ) :
-		$val = esc_html( get_theme_mod('store_logo_resize') )/100;
-		echo "#masthead #site-logo img { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
-		endif;
+
+	if ( get_theme_mod('store_hide_fc_line') ):
+        echo ".site-info .sep { display: none; }";
+	endif;
 
 	echo "</style>";
 }

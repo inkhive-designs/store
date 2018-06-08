@@ -1,23 +1,28 @@
+@import "../variables";
+@import "../functions";
 /* Customizer Styles */
-li#accordion-section-store_sec_upgrade h3 {
+li#accordion-section-store_sec_pro h3.accordion-section-title {
 	&:before {
-		content: "\f005";
+		content: "\f05a";
 		font-family: "FontAwesome";
 	}
 }
 
-li#accordion-section-store_sec_pro h3.accordion-section-title {
-	background: #fee3d0;
-	&:before {
-		content: "\f164";
-		font-family: "FontAwesome";
-	}
+/* ----------------
+Important Links
+ -----------------*/
+.store-important-links{
+	background: @accent;
+	padding: 5px 10px;
+	color: #FFF !important;
+	text-align: center;
+	display: block;
+	margin-top: 5px;
+	line-height: 1.2;
+	box-shadow: none;
+	font-style: normal;
+	text-decoration: none;
 }
-.prolists {
-	list-style: disc;
-	margin-left: 25px;
-	margin-top: 20px;
-	li {
-		margin-bottom: 1px;
-	}
+.store-important-links:hover{
+	background: darken(@accent, 15%);
 }
