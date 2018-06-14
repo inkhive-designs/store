@@ -150,7 +150,8 @@ $wp_customize->add_setting(
     'store_footer_text',
     array(
         'default'		=> '',
-        'sanitize_callback'	=> 'sanitize_text_field'
+        'sanitize_callback'	=> 'sanitize_text_field',
+        'transport'	=> 'postMessage'
     )
 );
 
@@ -167,6 +168,7 @@ $wp_customize->add_setting(
         'store_hide_fc_line',
         array(
            'sanitize_callback' => 'store_sanitize_checkbox',
+           'transport'	=> 'postMessage'
         )
 );
 

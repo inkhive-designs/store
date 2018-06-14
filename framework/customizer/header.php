@@ -39,7 +39,9 @@ function store_logo_enabled($control) {
 
     $wp_customize->add_setting(
         'store_hide_title_tagline',
-        array( 'sanitize_callback' => 'store_sanitize_checkbox' )
+        array( 'sanitize_callback' => 'store_sanitize_checkbox',
+        		'transport'			=> 'postMessage'
+        	)
     );
 
     $wp_customize->add_control(
@@ -57,7 +59,6 @@ function store_logo_enabled($control) {
 
 //Replace Header Text Color with, separate colors for Title and Description
 //Override store_site_titlecolor
-$wp_customize->remove_control('display_header_text');
 $wp_customize->remove_setting('header_textcolor');
 $wp_customize->add_setting('store_site_titlecolor', array(
     'default'     => '#FFFFFF',

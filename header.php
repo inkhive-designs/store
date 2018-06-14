@@ -26,6 +26,7 @@
 		<?php if (class_exists('woocommerce')) : ?>	
 		<?php get_template_part('framework/featured-components/coverflow', 'product'); ?>
 		<?php get_template_part('framework/featured-components/featured', 'products'); ?>
+		<?php get_template_part('framework/featured-components/test', 'products'); ?>
 		<?php endif; ?>
 		<?php get_template_part('framework/featured-components/coverflow', 'posts'); ?>
 		<?php get_template_part('framework/featured-components/featured', 'posts'); ?>

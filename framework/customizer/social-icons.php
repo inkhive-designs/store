@@ -18,7 +18,8 @@ $social_style = array(
 $wp_customize->add_setting(
     'store_social_icon_style_set', array(
     'sanitize_callback' => 'store_sanitize_social_style',
-    'default' => 'hvr-ripple-out'
+    'default' => 'hvr-ripple-out',
+    'transport'	=> 'postMessage'
 ));
 
 function store_sanitize_social_style( $input ) {
@@ -61,7 +62,8 @@ for ($x = 1 ; $x <= ($social_count - 3) ; $x++) :
     $wp_customize->add_setting(
         'store_social_'.$x, array(
         'sanitize_callback' => 'store_sanitize_social',
-        'default' => 'none'
+        'default' => 'none',
+        'transport'	=> 'postMessage'
     ));
 
     $wp_customize->add_control( 'store_social_'.$x, array(
