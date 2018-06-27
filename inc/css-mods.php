@@ -41,6 +41,16 @@ function store_custom_css_mods() {
         echo ".site-info .sep { display: none; }";
 	endif;
 
+    if (get_theme_mod('store_hero_background_image') != '') :
+        $image = get_theme_mod('store_hero_background_image');
+        echo  "#hero {
+                    	background-image: url('" . $image . "');
+                        background-size: cover;
+                }";
+    else:
+        echo "#hero { background: #efefef; }";
+    endif;
+
 	echo "</style>";
 }
 

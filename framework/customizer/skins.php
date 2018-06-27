@@ -1,35 +1,60 @@
 <?php
 //Select the Default Theme Skin
 function store_customize_register_skins( $wp_customize ) {
-$wp_customize->add_setting(
-    'store_skin',
-    array(
-        'default'=> 'default',
-        'sanitize_callback' => 'store_sanitize_skin'
-    )
-);
+    $wp_customize->add_setting(
+        'store_skin',
+        array(
+            'default'=> 'default',
+            'sanitize_callback' => 'store_sanitize_skin'
+        )
+    );
 
-$skins = array( 'default' => __('Default(blue)','store'),
-    'orange' =>  __('Orange','store'),
-    'brown' =>  __('Brown','store'),
-    'green' => __('Green','store'),
-    'grayscale' => __('GrayScale','store'),
-    'radish' => __('Radish','store'));
+    function store_sanitize_skin( $input ) {
+        if ( in_array($input, array('default','orange','brown','green', 'grayscale','reddish') ) )
+            return $input;
+        else
+            return '';
+    }
 
-$wp_customize->add_control(
-    'store_skin',array(
-        'settings' => 'store_skin',
-        'section'  => 'colors',
-        'type' => 'select',
-        'choices' => $skins,
-    )
-);
+    //Skins
+    $wp_customize->add_setting(
+        'store_skins',
+        array(
+            'default'	=> 'default',
+            'sanitize_callback' => 'store_sanitize_skin',
+            'transport'	=> 'refresh'
+        )
+    );
 
-function store_sanitize_skin( $input ) {
-    if ( in_array($input, array('default','orange','brown','green','grayscale','radish') ) )
-        return $input;
-    else
-        return '';
-}
+    if(!function_exists('store_skin_array')){
+        function store_skin_array(){
+            return array(
+                '#42a1cd' => 'default',
+                '#e48d48' => 'orange',
+                '#643020' => 'brown',
+                '#34c94a' => 'green',
+                '#444' => 'grayscale',
+                '#CA2D4F' => 'reddish',
+            );
+        }
+    }
+
+    $store_skin_array = store_skin_array();
+
+
+    $wp_customize->add_control(
+        new Store_Skin_Chooser(
+            $wp_customize,
+            'store_skins',
+            array(
+                'settings'		=> 'store_skins',
+                'section'		=> 'colors',
+                'label'			=> __( 'Select Skins', 'store' ),
+                'type'			=> 'skins',
+                'choices'		=> $store_skin_array,
+            )
+        )
+    );
+
 }
 add_action( 'customize_register', 'store_customize_register_skins' );

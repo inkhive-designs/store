@@ -24,7 +24,8 @@ add_action( 'customize_register', 'store_customize_register' );
 
 //Load All Individual Settings Based on Sections/Panels.
 require_once get_template_directory().'/framework/customizer/_googlefonts.php';
-require_once get_template_directory().'/framework/customizer/_featured-posts.php';
+require_once get_template_directory().'/framework/customizer/_fposts-showcase.php';
+require_once get_template_directory().'/framework/customizer/_fproducts-showcase.php';
 require_once get_template_directory().'/framework/customizer/_slider-swiper.php';
 require_once get_template_directory().'/framework/customizer/_layouts.php';
 require_once get_template_directory().'/framework/customizer/_sanitization.php';
