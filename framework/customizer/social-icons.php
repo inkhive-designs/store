@@ -48,11 +48,10 @@ $social_networks = array( //Redefinied in Sanitization Function.
     'twitter' => __('Twitter','store'),
     'google-plus' => __('Google Plus','store'),
     'instagram' => __('Instagram','store'),
-    'rss' => __('RSS Feeds','store'),
-    'vine' => __('Vine','store'),
     'vimeo-square' => __('Vimeo','store'),
     'youtube' => __('Youtube','store'),
     'flickr' => __('Flickr','store'),
+    'pinterest'	=> __('Pinterest','store')
 );
 
 $social_count = count($social_networks);
@@ -96,11 +95,10 @@ function store_sanitize_social( $input ) {
         'twitter',
         'google-plus',
         'instagram',
-        'rss',
-        'vine',
         'vimeo-square',
         'youtube',
-        'flickr'
+        'flickr',
+        'pinterest-p'
     );
     if ( in_array($input, $social_networks) )
         return $input;

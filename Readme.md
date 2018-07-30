@@ -3,7 +3,7 @@
 **Contributors:** (inkhive)  
 **Requires at least:** WordPress 4.4  
 **Tested up to:** WordPress 4.9
-**Version:** 1.1.5
+**Version:** 1.1.7
 **License:** GPL v3  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
 **Tags:** custom-background, two-columns, one-column, custom-colors, flexible-header, theme-options, right-sidebar, grid-layout, custom-menu, threaded-comments, translation-ready, featured-images, blog, full-width-template, e-commerce, footer-widgets, entertainment, photography, featured-image-header
@@ -206,4 +206,8 @@ Source: https://wordpress.org/plugins/woocommerce/
 
 * New Product Showcase Added
 * Skins Feature Upgraded
-       
+
+### Version 1.1.7
+
+* Font Awesome Updated
+* SahreASale ID added
