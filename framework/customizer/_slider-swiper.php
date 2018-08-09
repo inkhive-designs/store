@@ -144,6 +144,25 @@ $wp_customize->add_setting(
         );
 
     endfor;
+    
+    // 	Store Pro Placeholder
+	$wp_customize->add_section(
+	    'store_slider_placeholder',
+	    array(
+	        'title'     => 'More Slider Settings in Store Pro!',
+	        'priority'  => 30,
+	        'panel'     => 'store_slider_panel'
+	    )
+	);
+	
+	$wp_customize->add_control(
+	    'store_slider_placeholder', array(
+	        //'settings' => 'store_a_box_enable',
+	        'label'    => __( '', 'store' ),
+	        'section'  => 'store_slider_placeholder',
+	        'settings' => array(),
+	    )
+	);
 
     //active callback to see if the slide section is to be displayed or not
     function store_show_slide_sec( $control ) {

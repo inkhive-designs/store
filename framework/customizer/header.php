@@ -89,5 +89,24 @@ $wp_customize->add_control(new WP_Customize_Color_Control(
         'type' => 'color'
     ) )
 );
+
+// 	Store Pro Placeholder
+	$wp_customize->add_section(
+	    'store_header_placeholder',
+	    array(
+	        'title'     => 'More Header Settings in Store Pro!',
+	        'priority'  => 30,
+	        'panel'     => 'store_header_panel'
+	    )
+	);
+	
+	$wp_customize->add_control(
+	    'store_header_placeholder', array(
+	        //'settings' => 'store_a_box_enable',
+	        'label'    => __( '', 'store' ),
+	        'section'  => 'store_header_placeholder',
+	        'settings' => array(),
+	    )
+	);
 }
 add_action( 'customize_register', 'store_customize_register_header' );

@@ -208,5 +208,24 @@ $wp_customize->add_control(
         'default'  => '0'
     )
 );
+
+// 	Store Pro Placeholder
+$wp_customize->add_section(
+    'store_a_placeholder',
+    array(
+        'title'     => 'More Featured Areas in Store Pro!',
+        'priority'  => 30,
+        'panel'     => 'store_a_fcp_panel'
+    )
+);
+
+$wp_customize->add_control(
+    'store_a_box_placeholder', array(
+        //'settings' => 'store_a_box_enable',
+        'label'    => __( '', 'store' ),
+        'section'  => 'store_a_placeholder',
+        'settings' => array(),
+    )
+);
 }
 add_action( 'customize_register', 'store_customize_register_featured_posts_showcase' );

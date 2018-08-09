@@ -5,7 +5,7 @@
  *
  * @package    TGM-Plugin-Activation
  * @subpackage Example
- * @version    2.6.1 for parent theme Plum for publication on WordPress.org
+ * @version    2.6.1 for parent theme store for publication on WordPress.org
  * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
  * @copyright  Copyright (c) 2011, Thomas Griffin
  * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
@@ -17,7 +17,7 @@
  */
 require_once get_template_directory() . '/framework/class-tgm-plugin-activation.php';
 
-add_action( 'tgmpa_register', 'plum_register_required_plugins' );
+add_action( 'tgmpa_register', 'store_register_required_plugins' );
 
 /**
  * Register the required plugins for this theme.
@@ -36,7 +36,7 @@ add_action( 'tgmpa_register', 'plum_register_required_plugins' );
  *
  * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
  */
-function plum_register_required_plugins() {
+function store_register_required_plugins() {
 	/*
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
@@ -44,7 +44,7 @@ function plum_register_required_plugins() {
 	$plugins = array(
 		
 		array(
-			'name'		  => __('WPForms-Lite Contact Form Plugin', 'plum'),
+			'name'		  => __('WPForms-Lite Contact Form Plugin', 'store'),
 			'slug'		  => 'wpforms-lite',
 			'required'	  => false
 		),
@@ -61,7 +61,7 @@ function plum_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'plum',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'store',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tgmpa-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.
@@ -74,13 +74,13 @@ function plum_register_required_plugins() {
 				/* translators: 1: plugin name(s). */
 				'We recommend the following plugin for this theme: %1$s.',
 				'We recommend the following plugins for this theme: %1$s.',
-				'plum'
+				'store'
 			),
 			'notice_ask_to_update'            => _n_noop(
 				/* translators: 1: plugin name(s). */
 				'Update this plugin to its latest version to ensure maximum compatibility with this theme: %1$s.',
 				'Update these plugins to their latest version to ensure maximum compatibility with this theme: %1$s.',
-				'plum'
+				'store'
 			),
 		)
 	);

@@ -18,6 +18,23 @@ function store_customize_register( $wp_customize ) {
     $wp_customize->get_section('colors')->title = __('Theme Skins & Colors', 'store');
     $wp_customize->get_section('colors')->panel = 'store_design_panel';
     $wp_customize->get_section('background_image')->panel = 'store_design_panel';
+    
+    // 	Store Pro Placeholder
+	$wp_customize->add_section(
+	    'store_main_placeholder',
+	    array(
+	        'title'     => 'More Options in Store Pro!',
+	        'priority'  => 50,
+	    )
+	);
+	
+	$wp_customize->add_control(
+	    'store_main_placeholder', array(
+	        'label'    => __( '', 'store' ),
+	        'section'  => 'store_main_placeholder',
+	        'settings' => array(),
+	    )
+	);
 }
 add_action( 'customize_register', 'store_customize_register' );
 

@@ -2,8 +2,8 @@
 
 **Contributors:** (inkhive)  
 **Requires at least:** WordPress 4.4  
-**Tested up to:** WordPress 4.9
-**Version:** 1.1.8
+**Tested up to:** WordPress 4.9.8
+**Version:** 1.1.9
 **License:** GPL v3  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
 **Tags:** custom-background, two-columns, one-column, custom-colors, flexible-header, theme-options, right-sidebar, grid-layout, custom-menu, threaded-comments, translation-ready, featured-images, blog, full-width-template, e-commerce, footer-widgets, entertainment, photography, featured-image-header
@@ -54,7 +54,7 @@ This theme is 100% GPL. And any external resources used and bundled with the the
 	- https://github.com/mattkersley/Responsive-Menu
 	- MIT license
 	
-9/ TGM Plugin Activation
+9. TGM Plugin Activation
 	- http://tgmpluginactivation.com/
 	- GPL 2.0
 	
@@ -219,3 +219,7 @@ Source: https://wordpress.org/plugins/woocommerce/
 ### Version 1.1.8
 
 * WPForms TGM Added
+
+### Version 1.1.9
+
+* Customizer Modified

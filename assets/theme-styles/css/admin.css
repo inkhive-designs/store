@@ -116,3 +116,23 @@ Important Links
   line-height: 0 !important;
   border-radius: 0;
 }
+/* ---------------------
+  Placeholder Sections
+ ----------------------*/
+li#accordion-section-store_fc_boxes_placeholder,
+#accordion-section-store_a_placeholder,
+#accordion-section-store_placeholder,
+#accordion-section-store_slider_placeholder,
+#accordion-section-store_header_placeholder,
+#accordion-section-store_main_placeholder {
+  pointer-events: none;
+}
+li#accordion-section-store_fc_boxes_placeholder h3,
+#accordion-section-store_a_placeholder h3,
+#accordion-section-store_placeholder h3,
+#accordion-section-store_slider_placeholder h3,
+#accordion-section-store_header_placeholder h3,
+#accordion-section-store_main_placeholder h3 {
+  background-color: #f3f3f3 !important;
+  color: #6ab5d8 !important;
+}

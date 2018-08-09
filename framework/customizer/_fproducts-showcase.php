@@ -262,9 +262,57 @@ function store_customize_register_featured_products_showcase($wp_customize) {
                 'type' => 'text',
             )
         );
+        
+        // 	Store Pro Placeholder
+		$wp_customize->add_section(
+		    'store_placeholder',
+		    array(
+		        'title'     => 'More Featured Areas in Store Pro!',
+		        'priority'  => 30,
+		        'panel'     => 'store_fcp_panel'
+		    )
+		);
+		
+		$wp_customize->add_control(
+		    'store_box_placeholder', array(
+		        //'settings' => 'store_a_box_enable',
+		        'label'    => __( '', 'store' ),
+		        'section'  => 'store_placeholder',
+		        'settings' => array(),
+		    )
+		);
 
 
-    endif; //end class exists woocommerce
+    else :
+    
+    	//SQUARE BOXES
+        $wp_customize->add_section(
+            'store_fc_boxes_placeholder',
+            array(
+                'title'     => 'Enable WooCommerce for More!',
+                'priority'  => 45,
+                //'panel'     => 'store_fcp_panel'
+            )
+        );/*
+
+
+        $wp_customize->add_setting(
+            'store_box_enable_holder',
+            array( 'sanitize_callback' => 'store_sanitize_checkbox' )
+        );
+*/
+
+        $wp_customize->add_control(
+            'store_box_enable', array(
+                'settings' => 'store_box_enable_placeholder',
+                'label'    => __( 'Enable Square Boxes & Products Slider.', 'store' ),
+                'section'  => 'store_fc_boxes_placeholder',
+                'settings'	=> array(),
+                //'type'     => 'checkbox',
+            )
+        );
+        
+    endif;
 
 }
 add_action('customize_register', 'store_customize_register_featured_products_showcase');
