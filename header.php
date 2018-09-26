@@ -17,7 +17,7 @@
 	<!-- Smooth scrolling-->
     <div class="scroll-down">
         <a id="button-scroll-up" href="#colophon">
-            <i class="fa fa-hand-o-down"></i>
+            <i class="fas fa-hand-point-down"></i>
         </a>
     </div>
 

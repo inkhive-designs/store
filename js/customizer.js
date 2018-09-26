@@ -39,50 +39,50 @@
 	});
 	wp.customize( 'store_social_1', function( value ) {
 		value.bind( function( to ) {
-			var ClassNew	=	'fa fa-' + to;
+			var ClassNew	=	'fab fa-' + to;
 			jQuery('.social-icons' ).find( 'i:eq(0)' ).attr( 'class', ClassNew );
 		});
 	});
 	
 	wp.customize( 'store_social_2', function( value ) {
 		value.bind( function( to ) {
-			var ClassNew	=	'fa fa-' + to;
+			var ClassNew	=	'fab fa-' + to;
 			jQuery('.social-icons' ).find( 'i:eq(1)' ).attr( 'class', ClassNew );
 		});
 	});
 	
 	wp.customize( 'store_social_3', function( value ) {
 		value.bind( function( to ) {
-			var ClassNew	=	'fa fa-' + to;
+			var ClassNew	=	'fab fa-' + to;
 			jQuery('.social-icons' ).find( 'i:eq(2)' ).attr( 'class', ClassNew );
 		});
 	});
 	
 	wp.customize( 'store_social_4', function( value ) {
 		value.bind( function( to ) {
-			var ClassNew	=	'fa fa-' + to;
+			var ClassNew	=	'fab fa-' + to;
 			jQuery('.social-icons' ).find( 'i:eq(3)' ).attr( 'class', ClassNew );
 		});
 	});
 	
 	wp.customize( 'store_social_5', function( value ) {
 		value.bind( function( to ) {
-			var ClassNew	=	'fa fa-' + to;
+			var ClassNew	=	'fab fa-' + to;
 			jQuery('.social-icons' ).find( 'i:eq(4)' ).attr( 'class', ClassNew );
 		});
 	});
 	
 	wp.customize( 'store_social_6', function( value ) {
 		value.bind( function( to ) {
-			var ClassNew	=	'fa fa-' + to;
+			var ClassNew	=	'fab fa-' + to;
 			jQuery('.social-icons' ).find( 'i:eq(5)' ).attr( 'class', ClassNew );
 		});
 	});
 	
 	wp.customize( 'store_social_7', function( value ) {
 		value.bind( function( to ) {
-			var ClassNew	=	'fa fa-' + to;
-			jQuery('.social-icons' ).find( 'i:eq(5)' ).attr( 'class', ClassNew );
+			var ClassNew	=	'fab fa-' + to;
+			jQuery('.social-icons' ).find( 'i:eq(6)' ).attr( 'class', ClassNew );
 		});
 	});
 } )( jQuery );

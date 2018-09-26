@@ -98,7 +98,7 @@ function store_sanitize_social( $input ) {
         'vimeo-square',
         'youtube',
         'flickr',
-        'pinterest-p'
+        'pinterest'
     );
     if ( in_array($input, $social_networks) )
         return $input;

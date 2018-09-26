@@ -15,11 +15,11 @@ function store_custom_css_mods() {
 	
 	//Exception: IMage transform origin should be left on Left Alignment, i.e. Default
 	if ( get_theme_mod('store_title_font') ) :
-		echo ".title-font, h1, h2, .section-title, .woocommerce ul.products li.product h3 { font-family: ".esc_html( get_theme_mod('store_title_font','Lato') )."; }";
+		echo ".title-font, h1, h2, .section-title, .woocommerce ul.products li.product h3 { font-family: '".esc_html( get_theme_mod('store_title_font','Lato') )."'; }";
 	endif;
 	
 	if ( get_theme_mod('store_body_font') ) :
-		echo "body { font-family: ".esc_html( get_theme_mod('store_body_font','Open Sans') )."; }";
+		echo "body { font-family: '".esc_html( get_theme_mod('store_body_font','Open Sans') )."'; }";
 	endif;
 	
 	if ( get_theme_mod('store_site_titlecolor') ) :
